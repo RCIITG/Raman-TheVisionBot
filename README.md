@@ -1,8 +1,9 @@
 # Raman-TheVisionBot
 Humaniod Robot with abilities of foveated vision and object recognition
 Implementation:
-1) object recognition
-2) fixating and tracking objects
-3) path planning
-4) depth perception
-5) gesture recognision
+1) Object Recognition
+2) Fixating And Tracking Objects
+3) Path Planning
+4) Depth Perception
+5) Gesture Recognition
+6) Facial Recognition and Tracking
