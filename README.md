@@ -8,5 +8,3 @@ Implementation:
 5) Gesture Recognition
 6) Facial Recognition and Tracking
 
--Small edit!
->Another Small Edit
