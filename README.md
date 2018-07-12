@@ -1,5 +1,6 @@
 # Raman-TheVisionBot
-Humaniod Robot with abilities of foveated vision and object recognition
+Humanoid Robot with abilities of foveated vision and object recognition
+
 Implementation:
 1) Object Recognition
 2) Fixating And Tracking Objects
