@@ -1,1 +1,7 @@
-language: python
+{
+  "os": "linux",
+  "dist": "trusty",
+  "group": "stable",
+  ".result": "configured",
+  "language": "python"
+}
