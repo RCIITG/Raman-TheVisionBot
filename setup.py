@@ -33,19 +33,12 @@ class build_ext(_build_ext):
         import numpy
         self.include_dirs.append(numpy.get_include())
 
-solver_module = Extension('mmit.core.solver',
-                          language="c++",
-                          sources=['mmit/core/solver_python_bindings.cpp',
-                                   'mmit/core/solver.cpp',
-                                   'mmit/core/piecewise_function.cpp',
-                                   'mmit/core/coefficients.cpp'],
-                          extra_compile_args=["-std=c++0x"] + os_compile_flags)
 
-dependencies = ["joblib", "numpy", "scikit-learn", "six", "future"]
+dependencies = ["joblib", "numpy", "scikit-learn"]
 
 setup(
-    name = "mmit",
-    version = "1.1.1",
+    name = "raman",
+    version = "1.1",
     packages = find_packages(),
 
     cmdclass={'build_ext':build_ext},
