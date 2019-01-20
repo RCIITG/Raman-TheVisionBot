@@ -47,8 +47,8 @@ setup(
 
     author = "RCIITG",
     author_email = "roboclubiitg@gmail.com",
-    maintainer="Robotics Club, IITG",
-    maintainer_email="parismita@gmail.com",
+    maintainer="Robotics Club IITG, Parismita Das",
+    maintainer_email="roboclubiitg@gmail.com, das.parismita@gmail.com",
     description="Raman, The Humanoid",
     long_description = "Humaniod Robot with abilities of foveated vision and object recognition ",
     license = "GPL-3",
