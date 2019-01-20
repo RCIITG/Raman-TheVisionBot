@@ -26,4 +26,5 @@ notifications:
     on_failure: change
 
 env:
-- TEST_SUITE=test_python.out
+  matrix:
+    - TEST_SUITE=test_python.out
