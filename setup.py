@@ -54,8 +54,6 @@ setup(
     license = "GPL-3",
     keywords = "machine learning, computer vision, robotics, huamnoid",
     url = "https://github.com/RCIITG/Raman-TheVisionBot",
-
-    ext_modules = [solver_module],
     
     test_suite='nose.collector',
     tests_require=['nose']
