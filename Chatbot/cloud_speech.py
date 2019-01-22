@@ -1,15 +1,16 @@
-#Humanoid RAMAN - 4i Lab IITG
-#Import libraries
 from __future__ import division
+#Import libraries
 import re
 import sys
 import os
 
-# Provided by Google Cloud Platform
-
 #Google Cloud speech
+from google.cloud import speech
+from google.cloud.speech import enums
+from google.cloud.speech import types
 import pyaudio
 from six.moves import queue
+from google.oauth2 import service_account
 
 # Audio recording parameters
 RATE = 16000
@@ -80,6 +81,7 @@ class MicrophoneStream(object):
 
             yield b''.join(data)
 
+
 def listen_print_loop(responses):
     """Iterates through server responses and prints them.
 
@@ -120,16 +122,10 @@ def listen_print_loop(responses):
         if not result.is_final:
             sys.stdout.write(transcript + overwrite_chars + '\r')
             sys.stdout.flush()
-
             num_chars_printed = len(transcript)
-
+            
         else:
             print(transcript + overwrite_chars)
-
-            # Exit recognition if any of the transcribed phrases could be
-            # one of our keywords.
-            if re.search(r'\b(exit|quit)\b', transcript, re.I):
-                print('Exiting..')
-                break
-
-            num_chars_printed = 0
+            out = transcript
+            break
+    return out

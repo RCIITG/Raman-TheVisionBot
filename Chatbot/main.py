@@ -29,11 +29,14 @@ def hardcoded(quest):
 	'''
     if quest == 'who built you':
         return('I was built by Robotics Club I I T G')
+    if quest == 'who are you':
+        return('I am Raman, the Humanoid')
     elif quest == 'do you have a girlfriend':
         return('Considering the girls to boys ratio, how do you expect me to have one!')
     elif quest == 'world domination':
         return('Yeah! Definitely!')
     else:
+
         return(0)
 
 #Replace Papaya
@@ -70,26 +73,26 @@ def chat():
         speech.espeak('Welcome user')
         #speech.pspeak('Welcome user')
         #wait for tigger
+        detect = wake_word.trigger_detect(triggers)
+        speech.espeak('Yes')
         while True:
-            detect = wake_word.trigger_detect(triggers)
             if detect:
-                speech.espeak('Yes')
                 #speech.pspeak('Yes')
                 #Get input
-                question = speech.recog_web()
+                resp,question = speech.recog_cloud()
                 print('Input :', question)
                 #Check if exit
                 if question.strip() == 'exit':
                     print("Thank you for your presence. Goodbye.")
                     speech.espeak("Thank you for your presence. Goodbye")
                     #speech.pspeak("Thank you for your presence. Goodbye")
-                    return 0
+                    break
                 #Ask again if error
                 while (question == "error"):
                     print('> Can you repeat the question again!')
                     speech.espeak("Can you repeat the question again!")
                     #speech.pspeak("Can you repeat the question again!")
-                    question = speech.recog_web()
+                    resp,question = speech.recog_cloud()
                 #If hardcoded, get output
                 out = hardcoded(question)
                 #Else, generate output
