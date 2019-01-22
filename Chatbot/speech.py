@@ -53,8 +53,10 @@ def recog_cloud():
 	Uses Google Cloud Speech API to perform speech-to-text. PyAudio used for
 	audio streaming. Iterates through server responses
 
-	returns : text converted from input speech
-	return type : string
+	returns : 		responses : stream_recognize object
+					out :		text converted from input speech
+	return type : 	responses :	object
+					out :		string
 	'''
 	language_code = 'en-US'
 	client = speech.SpeechClient(credentials=credentials)
@@ -71,10 +73,10 @@ def recog_cloud():
                     for content in audio_generator)
 		print('Requests')
 		responses = client.streaming_recognize(streaming_config, requests)
-		print('Responses')
+		print('Speak')
         # Now, put the transcription responses to use.
-		cloud_speech.listen_print_loop(responses)
-	return responses
+		out = cloud_speech.listen_print_loop(responses)
+	return responses, out
 
 
 
