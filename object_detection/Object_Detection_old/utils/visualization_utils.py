@@ -27,6 +27,7 @@ import PIL.ImageDraw as ImageDraw
 import PIL.ImageFont as ImageFont
 import six
 import tensorflow as tf
+import json
 
 
 _TITLE_LEFT_MARGIN = 10
@@ -398,6 +399,9 @@ def visualize_boxes_and_labels_on_image_array(image,
               classes[i] % len(STANDARD_COLORS)]
 
   # Draw all boxes onto image.
+  loc=open("Text.txt","w+")
+  loc.write("")
+  loc=open("Text.txt","a+")
   for box, color in box_to_color_map.items():
     ymin, xmin, ymax, xmax = box
     if instance_masks is not None:
@@ -416,6 +420,20 @@ def visualize_boxes_and_labels_on_image_array(image,
         thickness=line_thickness,
         display_str_list=box_to_display_str_map[box],
         use_normalized_coordinates=use_normalized_coordinates)
+    #loc.write(str(box))
+    #loc.write(" "+color)
+    #class_name=str(class_name)
+    class_name=class_name.replace('u',"")
+    object={
+	     "box":str(box),
+	     "color":color,
+             "class_name":class_name
+	}
+    with open('Text.txt','w') as Text:
+	Text.write(json.dumps(object))
+    #loc.write(object)
+    #d2=json.load(open('Text.txt'))
+    #print d2
     if keypoints is not None:
       draw_keypoints_on_image_array(
           image,
