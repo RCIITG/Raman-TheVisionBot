@@ -12,3 +12,13 @@ Implementation:
 5) Gesture Recognition
 6) Facial Recognition and Tracking
 
+
+Todo:
+Noise cancellation sound module
+Lip movement
+Discretise movement of head
+Pid on head movement
+Localisation average
+2 voice 4 noise
+And subtract it
+
