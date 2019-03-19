@@ -5,9 +5,10 @@ def Quest(Keywords):
 		txt = json.loads(ans.read())
 		loc = txt["loc"]
 		name = txt["name"]
+		area = txt["area"]
 		i= 0
-		for l in loc:
-			if l == [0, 0]:
+		for l in area:
+			if l == max(area):
 				print("Your name is " +name[i])
 			i+=1
 
