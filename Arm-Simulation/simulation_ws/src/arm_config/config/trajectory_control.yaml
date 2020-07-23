@@ -1,0 +1,25 @@
+arm:
+  arm_joint_controller:
+    type: "position_controllers/JointTrajectoryController"
+    joints:
+      - base_link__link_01
+      - link_01__link_02
+      - link_02__link_03
+      - link_03__link_04
+      - link_04__link_05
+      - link_05__link_06
+    gains:
+      base_link__link_01: {p: 1000.0, i: 0.0, d: 0.1, i_clamp: 0.0}
+      link_01__link_02: {p: 1000.0, i: 0.0, d: 0.1, i_clamp: 0.0}
+      link_02__link_03: {p: 1000.0, i: 0.0, d: 0.1, i_clamp: 0.0}
+      link_03__link_04: {p: 1000.0, i: 0.0, d: 0.1, i_clamp: 0.0}
+      link_04__link_05: {p: 1000.0, i: 0.0, d: 0.1, i_clamp: 0.0}
+      link_05__link_06: {p: 1000.0, i: 0.0, d: 0.1, i_clamp: 0.0}
+  gripper_controller:
+    type: "position_controllers/JointTrajectoryController"
+    joints:
+      - link_06__finger_1
+      - link_06__finger_2
+    gains:
+      link_06__finger_1: {p: 50.0, d: 1.0, i: 0.01, i_clamp: 1.0}
+      link_06__finger_2: {p: 50.0, d: 1.0, i: 0.01, i_clamp: 1.0}

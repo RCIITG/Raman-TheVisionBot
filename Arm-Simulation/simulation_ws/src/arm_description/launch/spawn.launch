@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+    
+        <!-- Launch Gazebo -->
+        <include file="$(find arm_description)/launch/world.launch"/>
+        <!-- Robot model -->
+        <!-- Load the URDF into the ROS Parameter Server -->
+        <!-- Load joint controller configurations from YAML file to parameter server -->
+        <rosparam command="load" file="$(find arm_description)/config/control.yaml"/>
+        <!-- load the controllers -->
+        <node args="joint_state_controller 
+            joint1_position_controller 
+            joint2_position_controller
+            joint3_position_controller 
+            joint4_position_controller
+            joint5_position_controller 
+            joint6_position_controller
+             " name="controller_spawner" ns="/arm" output="screen" pkg="controller_manager" respawn="false" type="spawner"/>
+        <!-- convert joint states to TF transforms for rviz, etc -->
+        <node name="robot_state_publisher" output="screen" pkg="robot_state_publisher" respawn="false" type="robot_state_publisher">
+            <remap from="/joint_states" to="/arm/joint_states" />
+        </node>
+   
+</launch>
