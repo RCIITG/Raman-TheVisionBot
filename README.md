@@ -5,13 +5,14 @@
 
 ## Overview
 
-<a href="url"><img src="https://github.com/Mahesh1735/Raman-TheVisionBot/blob/master/Media/head.jpg" align="right" height="350" width="270" ></a>
+<a href="url"><img src="https://github.com/Mahesh1735/Raman-TheVisionBot/blob/master/Media/Blue_logo.jpg" align="right" height="350" width="270" ></a>
 Project Raman is a powerful android robot being designed in the form of an adult human, with its body shape built to resemble the human body. Our objective is to explore and research the field of robotics to make facilitate robot interaction and cooperation with humans.
 
 Historically, androids remained completely within the domain of science fiction. Only recently have advancements in robot technology allowed the design of functional and realistic humanoid robots. Theoretically, humanoids can perform any task a human being can, so long as they have the proper software. However, the complexity of doing so is immense. Hence we have a large team divided into sub-teams working on different problem statements, to come up with a humanoid that can perform numerous tasks.
 
 
-[**Click_Here**](https://www.youtube.com/watch?v=zkdHCojj_vs) **to watch the demonstration video.**
+- [**Click_Here**](https://www.youtube.com/watch?v=zkdHCojj_vs) **to watch the head demonstration video.**
+- [**Click_Here**](https://www.facebook.com/4ilabiitg/videos/4150499251659294) **to watch the hand demonstration video.**
 
 ## Specifications
 - Detect and locate objects, faces, face recognition.
@@ -31,7 +32,9 @@ This is our major concentration now. We need to design and develop the hands tha
 **Lower body**
 We will have to build a 6 wheelbase with a dynamic structure inspired by stair climbing bot such that it can handle rough terrains.
 
+<a href="url"><img src="https://github.com/Mahesh1735/Raman-TheVisionBot/blob/master/Media/head.jpg" align="center" height="300" width="230" ></a>
 <a href="url"><img src="https://github.com/Mahesh1735/Raman-TheVisionBot/blob/master/Media/handdes.png" align="center" height="300" width="450" ></a>
+<a href="url"><img src="https://github.com/Mahesh1735/Raman-TheVisionBot/blob/master/Media/hand.png" align="center" height="230" width="685" ></a>
 
 ## Jobs
 **Software**
