@@ -1,0 +1,7 @@
+<launch>
+	<rosparam command="load" file="$(find arm_config)/config/trajectory_control.yaml"/>
+	<node args="
+		arm_joint_controller            
+	  	gripper_controller" 
+	 name="arm_controller_spawner" ns="/arm" output="screen" pkg="controller_manager" respawn="false" type="spawner"/>
+</launch>

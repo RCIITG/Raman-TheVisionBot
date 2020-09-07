@@ -1,0 +1,9 @@
+<launch>
+	<!-- Load joint controller configurations from YAML file to parameter server -->
+	<rosparam command="load" file="$(find arm_description)/config/joint_states.yaml"/>
+	<node args="joint_state_controller" name="joint_controller_spawner" ns="/arm" output="screen" pkg="controller_manager" respawn="false" type="spawner"/>
+	<!-- convert joint states to TF transforms for rviz, etc -->
+	<node name="robot_state_publisher" output="screen" pkg="robot_state_publisher" respawn="false" type="robot_state_publisher">
+		<remap from="/joint_states" to="/arm/joint_states"/>
+	</node>
+</launch>
