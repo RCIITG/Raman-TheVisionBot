@@ -27,7 +27,7 @@ Historically, androids remained completely within the domain of science fiction.
 It can interact with humans in voice to voice format while maintaining the eye contact with the user. It can recognize the developers. The chatbot can perform small arithmetic calculations, memorizing, answers some general knowledge questions, etc. Version 1 of the head part is completed and it was demonstrated in TechEvince
 
 **Hands and Chest**
-This is our major concentration now. We need to design and develop the hands that are capable of performing some simple tasks like Poses and moves replication, interactive body language maintenance (Waving, Handshake, etc), picking up objects, throwing balls, aiming targets, etc
+This is our major concentration now. We need to design and develop the hands that are capable of performing some simple tasks like Poses and moves replication, interactive body language maintenance (Waving, Handshake, etc), picking up objects, throwing balls, aiming targets, etc. We have made a simulation of the arms in ROS and doing testing on it. 3D printing of the arms from shoulder down is done. We need to assemble them and then get it do some basic tasks.
 
 **Lower body**
 We will have to build a 6 wheelbase with a dynamic structure inspired by stair climbing bot such that it can handle rough terrains.
@@ -46,5 +46,5 @@ We will have to build a 6 wheelbase with a dynamic structure inspired by stair c
   3D-Modelling, Mechanical Simulations, Dynamic Analysis of mechanical structures, Control-Systems, Micro-controllers.
   
   Goals:
-  1. 3D-modeling of hands and 6 wheelbase structure and analyzing its strengths and stabilities.
+  1. 3D-modeling and testing of hands and 6 wheelbase structure and analyzing its strengths and stabilities.
   2. Developing all the electronics with micro-controllers, drivers and motors. Analyzing its power, torque, velocities and            controlling dynamixel motors.
